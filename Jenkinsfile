@@ -13,7 +13,7 @@ pipeline{
     stages{
         stage('Git Checkout'){
             steps{
-                git poll: true, branch: 'main', url: 'https://github.com/DevopsFarmer/todo.git'
+                git poll: true, branch: 'main', url: 'https://github.com/Preeti-bhati/todo.git'
             }
         }
         
