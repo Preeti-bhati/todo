@@ -3,6 +3,9 @@ pipeline{
     agent any
     parameters {
         booleanParam(name: 'Run_Deploy_Stage', defaultValue: true, description: 'Deploy automatically')
+        string(name: 'CONTAINER_NAME', defaultValue: 'my_container', description: 'Name of the Docker container')
+        string(name: 'HOST_PORT', defaultValue: '3000', description: 'Host port to map to the Docker container')
+        string(name: 'CONTAINER_PORT', defaultValue: '3000', description: 'Container port to map to the host port')
     }
     triggers { 
         pollSCM('H/2 * * * *') 
