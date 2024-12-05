@@ -4,4 +4,5 @@ services:
   web:
     image: ${IMAGE_NAME}:${IMAGE_TAG}
     container_name: ${CONTAINER_NAME}
-    ports: "${HOST_PORT}:${CONTAINER_PORT}"
+    ports: 
+    - "${HOST_PORT}:${CONTAINER_PORT}"
